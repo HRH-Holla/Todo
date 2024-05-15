@@ -4,8 +4,8 @@ namespace TodoApp.Model
 {
     public class Task
     {
-
-        public int Id { get; set; }
+        Task() { }
+        public long Id { get; set; }
 
         [Required]
         public string? Name { get; set; }
@@ -13,7 +13,7 @@ namespace TodoApp.Model
         [Required]
         public string? Description { get; set; }
 
-        [Required]
+        [Required] //TODO require data validation
         public DateTime DueDate { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
         public DateTime completed { get; set; }
